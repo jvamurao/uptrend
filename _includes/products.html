@@ -1,0 +1,77 @@
+<section id="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-center section-headline">Buy Our Beverages</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+    {% for item in site.data.products limit: 3 %}
+      <div class="product col-md-4">
+        <div class="card shadow border-0">
+          <img src="{{item.image}}" alt="{{item.title}}" data-toggle="modal" data-target="#id-{{item.id}}">
+          <div class="card-body" data-toggle="modal" data-target="#id-{{item.id}}">
+              <h4>{{item.title}}</h4>
+              <p>{{item.description | truncate: 80 }}</p>
+          </div>
+          <div class="card-footer">
+            <p><span class="price"><strong>{{site.data.main.currency}}{{item.price}}</strong></span>
+             <button
+                      class="snipcart-add-item btn btn-sm btn-success float-right"
+                      data-item-id="{{item.id}}"
+                      data-item-name="{{item.title}}"
+                      data-item-price="{{item.price}}"
+                      data-item-weight="{{item.weight}}"
+                      data-item-url="{{site.data.main.url}}{{page.url}}"
+                      data-item-description="{{item.description}}"
+                      data-item-max-quantity="{{item.maximum-quantity}}"
+                      >Add to cart
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="id-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="id-{{item.id}}" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <img src="{{item.image}}" alt="{{item.title}}">
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="exampleModalLabel">{{item.title}}</h5>
+            </div>
+            <div class="modal-body">
+                <p>{{item.description}}</p>
+                <p><strong>Price: {{site.data.main.currency}}{{item.price}}</strong></p>
+                <p><strong>Weight: {{item.weight}} gms</strong></p>
+                <p><strong>Category: </strong><span class="badge badge-primary">{{item.category}}</span></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button
+                       class="snipcart-add-item btn btn-sm btn-success float-right"
+                       data-item-id="{{item.id}}"
+                       data-item-name="{{item.title}}"
+                       data-item-price="{{item.price}}"
+                       data-item-weight="{{item.weight}}"
+                       data-item-url="{{site.data.main.url}}{{page.url}}"
+                       data-item-description="{{item.description}}"
+                       data-item-max-quantity="{{item.maximum-quantity}}"
+                       >Add to cart
+               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+    <div class="row">
+      <div class="col-lg-12 pt-4 text-center">
+              <a href="/products/" class="btn btn-lg btn-primary">View all products</a>
+        </div>
+    </div>
+  </div>
+</section>

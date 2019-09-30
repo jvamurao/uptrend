@@ -1,0 +1,71 @@
+<!-- Footer -->
+<!-- <footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy;&nbsp;<script>document.write(new Date().getFullYear());</script>&nbsp;{{site.data.main.title}} | All rights reserved</p>
+  </div>
+</footer> -->
+
+<footer class="footer py-5 bg-dark">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+          <div class="logo">
+            <a class="js-scroll-trigger" href="#page-top">{% if site.data.main.title %}{{site.data.main.title}}{% endif %}
+            {% if site.data.main.logo %}<span><img height="{{site.data.main.logo-height}}" src="{{site.data.main.logo}}" alt="{{site.data.main.title}}"></span>{% endif %}</a>
+            </div>
+            <p>{{site.data.main.about-footer}}</p>
+            <ul class="social-icon">
+              {% if site.data.main.facebook %}
+                <a href="{{site.data.main.facebook}}" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              {% endif %}
+              {% if site.data.main.twitter %}
+                <a href="{{site.data.main.twitter}}" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              {% endif %}
+              {% if site.data.main.instagram %}
+                <a href="{{site.data.main.instagram}}" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              {% endif %}
+              {% if site.data.main.email %}
+                <a href="mailto:{{site.data.main.email}}" class="social"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+              {% endif %}
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4 class="title">Quick Links</h4>
+            <ul class="navbar-nav ml-auto">
+              {% for item in site.data.main.quick-links %}
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{{item.link}}">{{item.title}}</a>
+              </li>
+              {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4 class="title">{{site.data.main.payment-footer.title}}</h4>
+            <p>{{site.data.main.payment-footer.description}}</p>
+            {% if site.data.main.payment-footer.icons %}
+            <ul class="payment">
+                <li><i class="fa fa-cc-amex" aria-hidden="true"></i></li>
+                <li><i class="fa fa-credit-card" aria-hidden="true"></i></li>
+                <li><i class="fa fa-paypal" aria-hidden="true"></i></li>
+                <li><i class="fa fa-cc-visa" aria-hidden="true"></i></li>
+            </ul>
+            {% endif %}
+            <br>
+            {% if site.data.main.payment-footer.support-button.link %}
+            <a class="btn btn-sm btn-success"
+            href="mailto:{{site.data.main.payment-footer.support-button.link}}"
+            >Support</a>
+            {% endif %}
+            {% if site.data.main.payment-footer.documentation-button.link %}
+            <a href="{{site.data.main.payment-footer.documentation-button.link}}" target="_blank" class="btn btn-sm btn-light">Documentation</a>
+            {% endif %}
+            </div>
+        </div>
+        <hr class="border-dark-gray">
+        <div class="row">
+          <div class="col-12">
+            <p class="text-left">Copyright © <a href="{{site.data.main.url}}">{{site.data.main.title}}</a>{% if site.data.main.copyright %}{{site.data.main.copyright}}{% endif %}</p>
+          </div>
+        </div>
+    </div>
+</footer>

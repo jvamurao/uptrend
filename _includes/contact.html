@@ -1,0 +1,24 @@
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-headline text-center">Contact Us</h2>
+        <p class="lead text-center">For any suggestions, feedbacks or questions please do shoot us an email or you can chat with us using the chat button located at the right hand side of the site.</p>
+      </div>
+    </div>
+
+  {% if site.data.main.buy-link %}
+    <div class="row">
+      <div class="col-lg-12">
+        <br>
+        <p class="text-center">
+          <a href="{{site.data.main.buy-link}}" class="btn btn-lg btn-primary" target="_blank">Email us</a>
+          {% if site.data.main.documentation-button %}
+          <a href="https://docs.jekyll-themes.com/" target="_blank" class="btn btn-lg btn-outline-secondary">Documentation</a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  {% endif %}
+  </div>
+</section>

@@ -1,0 +1,88 @@
+title: UptrendHotStuffs
+description: For your everyday coffee fix
+about: UptrendHotStuffs coffee
+about-footer: Check us on all major social media, click below!
+main-image: /assets/images/coffee2.png
+url: https://uptrendhotstuffs.com
+
+# Logo can be adjusted by setting a proper height. If not, please check _includes/nav.html file for manual editing.
+logo: /assets/images/uhs-icon.png
+logo-height: 25
+
+# Social media links
+facebook: https://facebook.com
+twitter: https://twitter.com
+instagram: https://instagram.com
+email: hello@email.com
+
+menu:
+  - title: Home
+    link: '#page-top'
+    page: /
+
+  - title: Products
+    link: '#products'
+    page: /products/
+
+  - title: Features
+    link: '#features'
+    page: '/#features'
+
+  - title: Contact
+    link: '#contact'
+    page: '/#contact'
+
+
+
+
+# Footer
+# For complete customization, go to _includes/footer.html
+
+quick-links:
+  - title: Home
+    link: /
+
+  - title: Products
+    link: /products/
+
+  - title: Documentation
+    link: 'https://docs.jekyll-themes.com/docs/dragon-fruit/'
+
+  - title: Contact
+    link: 'mailto:hello@ekyll-themes.com'
+
+
+payment-footer:
+  title: Payment
+  description: We accept major credit cards.
+  icons: true
+  support-button:
+    link: hello@webjeda.com
+  documentation-button:
+    link: https://docs.jekyll-themes.com/docs/dragon-fruit/
+
+copyright: ' | Powered by <a href="https://facebook.com" target="_blank">kn0where</a>'
+
+
+# Analytics
+analytics: UA-92266803-4
+
+# This applies to all products
+currency: '$'
+cart-popup: true #set it to false if you do not want to see the popup showing added product in the cart
+floating-cart: true # shows number of items in the cart in a floating button in phones
+
+
+# Sign up with SnipCart and go to https://app.snipcart.com/dashboard/account/credentials to find your API
+#snipcart-api: OGI1NGJiZDktMDM5Ny00MWM0LTg0ZTYtNDQ5M2FmMzQ3MzJhNjM2OTU5MjcxOTA3NDM5MjE3
+snipcart-api: YzZiNjE3MTQtZWM1Ny00ZWY4LTljYzYtZDdjZDNlODEyYTZjNjM3MDUzNDY5OTI3NTExMzA2
+#snipcart-api: pk_test_dpHZhd2vpZxqHeeu9OOVq40Q00o9w9nw1v
+
+
+# Crisp Chat website ID - Signup => https://app.crisp.chat/settings/website/ => Settings => Setup instruction => Copy website ID
+#crisp-chat-website-id: b8652974-7163-4c3a-a8aa-7ae46da8d460
+crisp-chat-website-id: 8edc38c0-2c7d-41d3-baf6-81d99f484c44
+
+
+# Remove the lines below
+buy-link: https://facebook.com

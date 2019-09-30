@@ -1,0 +1,51 @@
+<!-- Navigation -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav"> -->
+<nav class="navbar {% if page.type != 'home' %}navbar-darker-bg{% endif %} navbar-expand-lg navbar-dark navbar-scroll-change fixed-top" id="mainNav">
+  <div class="container">
+    
+    {% if site.data.main.logo %}<span><img height="{{site.data.main.logo-height}}" src="{{site.data.main.logo}}" alt="{{site.data.main.title}}"></span>{% endif %}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+
+        {% for item in site.data.main.menu %}
+        <li class="nav-item">
+          {% if page.url == '/' %}
+          <a class="nav-link js-scroll-trigger" href="{{item.link}}">{{item.title}}</a>
+          {% else %}
+          <a class="nav-link js-scroll-trigger" href="{{item.page}}">{{item.title}}</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+        <li class="nav-item">
+          <a href="#" class="nav-link snipcart-user-profile">
+            <span class="snipcart-user-email">Login</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link snipcart-user-logout">
+          Logout
+          </a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger snipcart-checkout" href="#">  <div class="snipcart-summary">
+            <i class="fa fa-shopping-bag text-light" aria-hidden="true"></i> <span class="snipcart-total-items cart-number"></span>
+        </div></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,12 @@
+<header class="{% if page.url == '/' %}bg-primary{% else %}bg-image{% endif %} text-white" {% if page.url != '/' %}style="background-image: url({{page.image}})"{% endif %}>
+  <div class="container text-center">
+    {% if page.url == '/' %}
+    <img class="img-fluid header-image" src="{{site.data.main.main-image}}" alt="{{site.data.main.title}}">
+    <h1>{{site.data.main.description}}</h1>
+    <p class="lead">{{site.data.main.about}}</p>
+    {% else %}
+    <h1 class="display-2">{{page.title}}</h1>
+    <p class="lead">{{page.description}}</p>
+    {% endif %}
+  </div>
+</header>
